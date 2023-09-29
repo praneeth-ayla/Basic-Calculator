@@ -1,5 +1,4 @@
 // Functions to add, subtract, multiply, divide and reminder
-
 function add(a, b) {
     return a + b;
 }
@@ -17,25 +16,25 @@ function modulo(a, b) {
 }
 
 // Variables to store the numbers and operator
-
 let firstNum = "";
 let secondNum = "";
 let operatorVar = "";
 
 // Operate function for performing the operation
-
 const operate = (firstNum, operator, secondNum) => {
     let result = 0;
+    const num1 = parseFloat(firstNum); // Convert to a number
+    const num2 = parseFloat(secondNum); // Convert to a number
     if (operator === "+") {
-        result = add(firstNum, secondNum);
+        result = num1 + num2;
     } else if (operator === "-") {
-        result = subtract(firstNum, secondNum);
+        result = num1 - num2;
     } else if (operator === "*") {
-        result = multiply(firstNum, secondNum);
+        result = num1 * num2;
     } else if (operator === "/") {
-        result = divide(firstNum, secondNum);
+        result = num1 / num2;
     } else if (operator === "%") {
-        result = modulo(firstNum, secondNum);
+        result = num1 % num2;
     }
     return result;
 };
@@ -73,6 +72,7 @@ function operatorSelect(operator) {
     }
 }
 
+// Clear button
 function clearFunc() {
     secondScreen.innerHTML = "";
     firstScreen.innerHTML = "";
@@ -81,10 +81,12 @@ function clearFunc() {
     operatorVar = "";
 }
 
+// Delete button
 function deleteFunc() {
     secondScreen.innerHTML = "";
 }
 
+// Equals button
 function equalFunc() {
     secondNum = secondScreen.innerHTML;
     let result = operate(firstNum, operatorVar, secondNum);
