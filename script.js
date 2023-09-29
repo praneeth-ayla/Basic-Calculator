@@ -59,10 +59,15 @@ function numSelect(num) {
     }
 }
 
+function operatorNew(operator) {
+    operatorVar = operator;
+    firstScreen.innerHTML = firstNum + operator;
+}
+
 function operatorSelect(operator) {
     if (secondScreen.innerHTML != "") {
         firstNum = secondScreen.innerHTML;
-        firstScreen.innerHTML = firstNum + " " + operator;
+        firstScreen.innerHTML = firstNum + " ";
         secondScreen.innerHTML = "";
         operatorVar = operator;
     }
