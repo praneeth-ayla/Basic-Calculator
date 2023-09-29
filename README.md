@@ -1,7 +1,7 @@
 # Basic Calculator Web App
 [Live Demo](https://praneeth-ayla.github.io/Basic-Calculator/) :point_left:
 
-![Alt text](CalculatorScreenshot.png)
+![Calculator Screenshot](CalculatorScreenshot.png)
 
 
 This is a simple web-based calculator application that allows users to perform basic arithmetic operations like addition, subtraction, multiplication, division, and calculating remainders. It's a handy tool for quick calculations, whether you're at work, school, or just need a simple calculator online.
