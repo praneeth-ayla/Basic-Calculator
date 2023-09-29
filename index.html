@@ -9,27 +9,86 @@
     <body>
         <h1>Calculator</h1>
         <div id="container">
-            <div id="screen">fsdafasd</div>
+            <div id="screen">
+                <div id="firstLine"></div>
+                <div id="secondLine"></div>
+            </div>
             <div id="buttons">
-                <div class="btn clear">CLEAR</div>
-                <div class="btn delete">DELETE</div>
-                <div class="btn modulo">%</div>
-                <div class="btn b7">7</div>
-                <div class="btn b8">8</div>
-                <div class="btn b9">9</div>
-                <div class="btn divide">/</div>
-                <div class="btn b4">4</div>
-                <div class="btn b5">5</div>
-                <div class="btn b6">6</div>
-                <div class="btn multiply">*</div>
-                <div class="btn b1">1</div>
-                <div class="btn b2">2</div>
-                <div class="btn b3">3</div>
-                <div class="btn subtract">-</div>
-                <div class="btn dot">.</div>
-                <div class="btn b0">0</div>
-                <div class="btn add">+</div>
-                <div class="btn equals">=</div>
+                <button class="btn clearBtn" onclick="this.blur();clearFunc()">
+                    CLEAR
+                </button>
+                <button
+                    class="btn deleteBtn"
+                    onclick="this.blur();deleteFunc()"
+                >
+                    DELETE
+                </button>
+                <button
+                    class="btn moduloBtn"
+                    onclick="this.blur();operatorSelect('%');operatorSecond('%')"
+                >
+                    %
+                </button>
+                <button class="btn b7 b" onclick="this.blur();numSelect('7')">
+                    7
+                </button>
+                <button class="btn b8 b" onclick="this.blur();numSelect('8')">
+                    8
+                </button>
+                <button class="btn b9 b" onclick="this.blur();numSelect('9')">
+                    9
+                </button>
+                <button
+                    class="btn divide"
+                    onclick="this.blur();operatorSelect('/');operatorSecond('/')"
+                >
+                    /
+                </button>
+                <button class="btn b4 b" onclick="this.blur();numSelect('4')">
+                    4
+                </button>
+                <button class="btn b5 b" onclick="this.blur();numSelect('5')">
+                    5
+                </button>
+                <button class="btn b6 b" onclick="this.blur();numSelect('6')">
+                    6
+                </button>
+                <button
+                    class="btn multiply"
+                    onclick="this.blur();operatorSelect('*');operatorSecond('*')"
+                >
+                    *
+                </button>
+                <button class="btn b1 b" onclick="this.blur();numSelect('1')">
+                    1
+                </button>
+                <button class="btn b2 b" onclick="this.blur();numSelect('2')">
+                    2
+                </button>
+                <button class="btn b3 b" onclick="this.blur();numSelect('3')">
+                    3
+                </button>
+                <button
+                    class="btn subtract"
+                    onclick="this.blur();operatorSelect('-');operatorSecond('-')"
+                >
+                    -
+                </button>
+                <button class="btn dot" onclick="this.blur();numSelect('.')">
+                    .
+                </button>
+                <button class="btn b0 b" onclick="this.blur();numSelect('0')">
+                    0
+                </button>
+                <button
+                    class="btn add"
+                    onclick="this.blur();operatorSelect('+');operatorSecond('+')"
+                >
+                    +
+                </button>
+                <button class="btn equals" onclick="this.blur();equalFunc()">
+                    =
+                </button>
             </div>
         </div>
         <script src="script.js"></script>

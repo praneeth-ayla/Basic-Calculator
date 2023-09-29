@@ -18,9 +18,9 @@ function modulo(a, b) {
 
 // Variables to store the numbers and operator
 
-let firstNum = 0;
-let secondNum = 0;
-let operator = "";
+let firstNum = "";
+let secondNum = "";
+let operatorVar = "";
 
 // Operate function for performing the operation
 
@@ -28,21 +28,64 @@ const operate = (firstNum, operator, secondNum) => {
     let result = 0;
     if (operator === "+") {
         result = add(firstNum, secondNum);
-    }
-    elif(operator === "-");
-    {
+    } else if (operator === "-") {
         result = subtract(firstNum, secondNum);
-    }
-    elif(operator === "*");
-    {
+    } else if (operator === "*") {
         result = multiply(firstNum, secondNum);
-    }
-    elif(operator === "/");
-    {
+    } else if (operator === "/") {
         result = divide(firstNum, secondNum);
-    }
-    elif(operator === "%");
-    {
+    } else if (operator === "%") {
         result = modulo(firstNum, secondNum);
     }
+    return result;
 };
+
+let firstScreen = document.getElementById("firstLine");
+firstScreen.innerHTML = "";
+let secondScreen = document.getElementById("secondLine");
+secondScreen.innerHTML = "";
+
+function numSelect(num) {
+    if (num === ".") {
+        if (
+            secondScreen.innerHTML === "" ||
+            secondScreen.innerHTML.includes(".")
+        ) {
+        } else {
+            secondScreen.innerHTML += num;
+        }
+    } else {
+        secondScreen.innerHTML += num;
+    }
+}
+
+function operatorSelect(operator) {
+    if (secondScreen.innerHTML != "") {
+        firstNum = secondScreen.innerHTML;
+        firstScreen.innerHTML = firstNum + " " + operator;
+        secondScreen.innerHTML = "";
+        operatorVar = operator;
+    }
+}
+
+function clearFunc() {
+    secondScreen.innerHTML = "";
+    firstScreen.innerHTML = "";
+    firstNum = "";
+    secondNum = "";
+    operatorVar = "";
+}
+
+function deleteFunc() {
+    secondScreen.innerHTML = "";
+}
+
+function equalFunc() {
+    secondNum = secondScreen.innerHTML;
+    let result = operate(firstNum, operatorVar, secondNum);
+    firstScreen.innerHTML = result;
+    secondScreen.innerHTML = "";
+    secondNum = "";
+    firstNum = result;
+    operatorVar = "";
+}

@@ -23,12 +23,22 @@ body {
     width: 360px;
     border: 2px solid black;
     margin: 20px 20px 0px 20px;
-    margin-top: 20px;
     border-radius: 8px;
     background-color: lightgray;
     text-align: center;
     font-size: 20px;
     color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+#secondLine,
+#firstLine {
+    height: 60px;
+    width: 340px;
+    border-bottom: 1px solid black;
+    text-align: end;
+    padding: 10px;
 }
 
 #buttons {
@@ -46,6 +56,11 @@ body {
     border-radius: 8px;
 }
 
+button {
+    color: white;
+    cursor: pointer;
+}
+
 .btn {
     background-color: rgb(53, 53, 53);
 
@@ -55,25 +70,16 @@ body {
     border-radius: 5px;
 }
 
-.clear {
+.clearBtn {
     grid-column: 1 / span 2;
     background-color: rgb(233, 122, 122);
 }
-.delete {
+.deleteBtn {
     background-color: rgb(240, 148, 112);
 }
 .equals {
     background-color: lightgreen;
 }
-.b1,
-.b2,
-.b3,
-.b4,
-.b5,
-.b6,
-.b7,
-.b8,
-.b9,
-.b0 {
+.b {
     background-color: rgb(161, 158, 158);
 }
